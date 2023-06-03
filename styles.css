@@ -488,12 +488,7 @@ body {
     display: none;
   }
   .githubcontainer .about {
-     width: 20rem;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    ;width:30rem;
   }
   .about {
     display: flex;
