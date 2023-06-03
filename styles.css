@@ -423,11 +423,21 @@ body {
   .about-gitlogo {
     display: none;
   }
-  .githubcontainer .about {
+ .githubcontainer .about {
     width: 30rem;
     display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
   }
-
+  .about {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
   .about button {
     width: 9rem;
   }
