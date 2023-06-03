@@ -10,6 +10,33 @@ html {
 body {
   overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
+  cursor: url("image/f36da93324565588e8a274e727fc18d8-removebg-preview.png"),
+    auto;
+}
+
+#notice-bar {
+  height: 2rem;
+  background-color: hsl(0, 0%, 84%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 1rem;
+}
+
+#notice-text {
+  flex-grow: 1;
+  font-weight: bold;
+  color: #7c7c7c;
+}
+
+#close-button {
+  display: flex;
+  align-items: center;
+  background-color: #cccccc00;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 .container {
@@ -23,6 +50,8 @@ body {
 }
 
 .header {
+  /* position: sticky;
+  top: 0; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,6 +202,7 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  flex-wrap: wrap;
 
   background-color: #f8f7f7;
 }
@@ -211,17 +241,23 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+  flex-wrap: wrap;
 
   background-color: #f8f7f7;
 }
 
 .about-gitlogo {
   width: 30rem;
-  height: 22rem;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-gitlogo svg path {
-  fill: #181717;
+.about-gitlogo img {
+  max-width: 100%;
+  max-height: 100%;
+  filter: drop-shadow(6px 6px 12px #919191, -6px -6px 12px #6e6e6e);
 }
 
 .githubcontainer .about {
@@ -373,18 +409,16 @@ body {
     width: 22rem;
   }
   .aboutcontainer {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
   .aboutcontainer .h1 {
     width: 30rem;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    text-align: left;
   }
   .githubcontainer {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
   }
   .about-gitlogo {
     display: none;
@@ -392,17 +426,6 @@ body {
   .githubcontainer .about {
     width: 30rem;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-  }
-  .about {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
   }
 
   .about button {
@@ -434,7 +457,7 @@ body {
     width: 22rem;
   }
   .aboutcontainer {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .aboutcontainer .h1 {
     width: 20rem;
@@ -452,7 +475,7 @@ body {
     height: 20rem;
   }
   .githubcontainer {
-    flex-direction: column;
+    flex-wrap: wrap;
   }
   .about-gitlogo {
     display: none;
@@ -477,6 +500,8 @@ body {
   }
   .about button {
     width: 9rem;
+    position: relative;
+    left: 25%;
   }
   .contactform {
     width: 17rem;
@@ -484,5 +509,77 @@ body {
   }
   .contactform .inputBox span {
     left: 16%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header {
+    justify-content: center;
+  }
+  .header h2 {
+    padding: 0;
+  }
+  .header ul {
+    display: none;
+  }
+  .search-bar input {
+    width: 18rem;
+  }
+  .suggestions {
+    width: 20rem;
+  }
+  .aboutcontainer {
+    flex-wrap: wrap;
+  }
+  .aboutcontainer .h1 {
+    width: 20rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .aboutcontainer .h1 p {
+    font-size: 1.2rem;
+  }
+  .howto-video {
+    width: 20rem;
+    height: 20rem;
+  }
+  .githubcontainer {
+    flex-wrap: wrap;
+  }
+  .about-gitlogo {
+    display: none;
+  }
+  .githubcontainer .about {
+    width: 20rem;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .about {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .githubcontainer .about p {
+    font-size: 1.2rem;
+  }
+  .about button {
+    width: 9rem;
+    position: relative;
+    left: 25%;
+  }
+  .contactform {
+    width: 14rem;
+    height: 19rem;
+  }
+  .contactform .inputBox span {
+    left: 18%;
   }
 }

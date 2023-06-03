@@ -1,3 +1,7 @@
+document.getElementById("close-button").addEventListener("click", function () {
+  document.getElementById("notice-bar").style.display = "none";
+});
+
 const searchInput = document.getElementById("searchInput");
 const suggestionList = document.getElementById("suggestionList");
 
