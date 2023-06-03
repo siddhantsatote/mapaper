@@ -493,7 +493,7 @@ body {
     display: none;
   }
   .githubcontainer .about {
-     width: 100%;
+     width: 20rem;
     display: flex;
     align-content: center;
     justify-content: center;
@@ -565,7 +565,7 @@ body {
     display: none;
   }
   .githubcontainer .about {
-    width: 100%;
+      width: 20rem;
     display: flex;
     align-content: center;
     justify-content: center;
